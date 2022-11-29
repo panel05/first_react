@@ -3,16 +3,19 @@ import './Konyv.css'
 
 
 function Konyv(props){
-    function kosarba(){
-        console.log(props.konyvObj)
-        props.kosarKezelesFv(props.konyvObj)
+    function kosarKezeles(){
+        
+        //App.js kosarkezelésének a hívása
+        props.kosarKezeles(props.konyvObj)
+        //props.kosarKezeles(props.konyvObj.ar)
     }
     return(
         <div className='konyvek'>
             <h3>{props.konyvObj.cim}</h3>
             <p>{props.konyvObj.szerzo}</p>
             <p>{props.konyvObj.ar}</p>
-            <button onClick={kosarba}>Kosárba</button>
+            {/*Konyv komponenes kosárkezelésének hívása*/ }
+            <button onClick={kosarKezeles}>Kosárba</button>
         </div>
     );
 }
